@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from "axios"
-import {useNavigate} from "react-router-dom"
-import logo from './logo.svg'
+import {useNavigate} from "react-router-dom";
+import Header from './Header';
+// import logo from './logo.svg'
 const Register = () => {
 
     const [fname,setFName] = useState("");
@@ -42,7 +43,7 @@ const Register = () => {
     }
 
     return (
-        <>
+        <><Header/>
             <div className='container mt-3'>
                 <h1>Upload Your Img Here</h1>
                
@@ -69,4 +70,4 @@ const Register = () => {
     )
 }
 
-export default Register
+export default Register;
