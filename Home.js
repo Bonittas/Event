@@ -1,112 +1,105 @@
-import { useEffect, useState } from "react";
-import Body from "./Body";
-import Rophnan from "./Rophnan.png";
-import baz from "./baz.png";
-import theatre from "./theatre.png";
-import Exhib from "./Exhib.png";
-import lm from "./lm.png";
+import React, { useEffect, useState } from 'react'
+import Button from 'react-bootstrap/Button';
+import { NavLink } from "react-router-dom"
+import Card from 'react-bootstrap/Card';
+import axios from 'axios';
+import moment from "moment"
+import Alert from 'react-bootstrap/Alert';
+import "../index.css"
+
+import Header from './Header';
 
 const Home = () => {
-  const [events, setevents] = useState(null);
-  return (
-
-  <>
-  <div className="nav">
-  <a href="">Home</a>
-    <a href="">About-us</a>
-    <a href="">Contact-us</a>
-  </div>
-  <p>Ethio-Events</p>
-  <section className="Events">
-  <a className="product-image" href="Rophnan.png"> <img id="ro" src={Rophnan}height={200} width={200}/></a>
   
-      <div className="discription">
-          <div className="body">
-              <p className="title">Concert</p>
-          </div>
-      </div>
-      <div className="inner_title">By : DJ. Rophnan<br></br>
-      Address : Millinium Hall<br></br>
-      Date and Time : Janunary 14 Saturday Satrting from 6PM</div>
+    const [data, setData] = useState([]);
 
-  <div className="add-to-cart-button">
-      <div className="form-ctrl">
-          <button type="button">
-              <span className="list">More</span>
+    const [show, setShow] = useState(false);
+
+    const getUserData = async () => {
+        const res = await axios.get("/getdata", {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        if (res.data.status == 201) {
+            console.log("data get");
+            setData(res.data.data)
+
+        } else {
+            console.log("error")
+        }
+    }
+
+
+    const dltUser = async (id) => {
+        console.log(id)
+        const res = await axios.delete(`/${id}`, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        if (res.data.status == 201) {
+            getUserData()
+            setShow(true)
+        } else {
+            console.log("error")
+        }
+    }
+
+    useEffect(() => {
+        getUserData()
+    }, [])
+
+    return (
+         
+        <>
+          <Header/>
+            {
+                show ? <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+                    {/* User Delete */}
+                </Alert> : ""
+            }
+            <div className="container1">
+              
+                <div className='text2'>
+                    {
+                        data.length > 0 ? data.map((el, i) => {
+                          
+                            return (
+                                
+                                <>
+                             
+                                     <section className="Events">
+                                     
+  <a className="Eimage" > <img id="ro" src={`/uploads/${el.userimg}`} height={200} width={262}/></a>
+  
+<div className='container'>
+
+  <div className="discription">
+         
+              <p className="mytitle">Description : {el.username}</p></div>
+              <div className="add-img">
+      <div className="del">
+          <button type="button" id='del'  onClick={() => dltUser(el.id)}>
+          Delete
+              <span className="list"></span>
           </button>
       </div>
   </div>
-</section>
-
-<section className="Events">
-  <a className="product-image" href="Rophnan.png"> <img id="ro" src={Exhib}height={200} width={200}/></a>
-  
-      <div className="discription">
-          <div className="body">
-              <p className="title">Exhibition</p>
-          </div>
       </div>
-      <div className="inner_title">
-      Address : Ethiopian National Museum<br></br>
-      Date and Time : April 5-10 Monday-Saturday<br></br> Openning time 9AM-2AM</div>
+     
+ </section>
+                                </>
+                            )
+                        }) : ""
+                    }
 
-  <div className="add-to-cart-button">
-      <div className="form-ctrl">
-          <button type="button">
-              <span className="list">More</span>
-          </button>
-      </div>
-  </div>
-</section>
-<section className="Events">
-  <a className="product-image" href="Rophnan.png"> <img id="ro" src={baz}height={200} width={200}/></a>
-  
-      <div className="discription">
-          <div className="body">
-              <p className="title">Bazzar</p>
-          </div>
-      </div>
-      <div className="inner_title">
-      Address : MERKATO<br></br>
-      Date and Time : March 25 Saturday<br></br> Opening time : 8AM
-      <br></br>Closing time : 6AM</div>
-
-  <div className="add-to-cart-button">
-      <div className="form-ctrl">
-          <button type="button">
-              <span className="list">More</span>
-          </button>
-      </div>
-  </div>
-</section>
-<section className="Events">
-  <a className="product-image" href="Rophnan.png"> <img id="ro" src={theatre}height={200} width={200}/></a>
-  
-      <div className="discription">
-          <div className="body">
-              <p className="title">Theatre</p>
-          </div>
-      </div>
-      <div className="inner_title"><br></br>
-      Address : Biherawi Theatre<br></br>
-      Date and Time : April 1 Tuesday Starting from 6PM-2PM</div>
-
-  <div className="add-to-cart-button">
-      <div className="form-ctrl">
-          <button type="button">
-              <span className="list">More</span>
-          </button>
-      </div>
-  </div>
-</section>
-
-
-    <div className="home" >
-
-      {events && <Body events={events}  {...<img src={require("./logo.svg").default}/>}/>}
-      
-    </div></>
-  );
+                </div>
+            </div>
+        </>
+    )
 }
- 
+
 export default Home;
