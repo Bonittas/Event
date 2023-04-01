@@ -56,6 +56,15 @@ const Home = () => {
          
         <>
           <Header/>
+      <div className='container'>
+    <div className='wrapper'>
+    <img src={run4} width={1000}/>
+    <img src={concert} width={1000}/>
+    <img src={run4} width={1000}/>
+    <img src={run4} width={1000}/>
+   
+   </div>
+</div>
             {
                 show ? <Alert variant="danger" onClose={() => setShow(false)} dismissible>
                     {/* User Delete */}
