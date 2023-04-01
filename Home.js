@@ -56,6 +56,13 @@ const Home = () => {
          
         <>
           <Header/>
+                <div class="containers">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter"> View events,  Add your events,  Enjoy moments</h3>
+    </div>
+  </div>
+</div>
       <div className='container'>
     <div className='wrapper'>
     <img src={run4} width={1000}/>
