@@ -6,6 +6,7 @@ import axios from 'axios';
 import moment from "moment"
 import Alert from 'react-bootstrap/Alert';
 import "../index.css"
+import list from './list';
 
 import Header from './Header';
 
@@ -56,22 +57,30 @@ const Home = () => {
          
         <>
           <Header/>
-                <div class="containers">
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h3 class="animate-charcter"> View events,  Add your events,  Enjoy moments</h3>
+          <div className='catagory'>
+            <div className="Cat">
+        <ul>
+        <li>
+         <a href='/Dairy'>Dairy Products</a> 
+        </li>
+        <li>
+        <a href='/Dairy'>Vegetables</a> 
+        </li>
+        <li>
+        <a href='/Dairy'>Fruits</a> 
+        </li>
+        <li>
+        <a href='/Dairy'>Drinks</a> 
+        </li>
+        <li>
+        <a href='/Dairy'>Meat and Fishes</a> 
+        </li>
+        <li>
+        <a href='/Dairy'>Sanitary Products</a> 
+        </li>
+        
+      </ul></div>  
     </div>
-  </div>
-</div>
-      <div className='container'>
-    <div className='wrapper'>
-    <img src={run4} width={1000}/>
-    <img src={concert} width={1000}/>
-    <img src={run4} width={1000}/>
-    <img src={run4} width={1000}/>
-   
-   </div>
-</div>
             {
                 show ? <Alert variant="danger" onClose={() => setShow(false)} dismissible>
                     {/* User Delete */}
@@ -84,12 +93,15 @@ const Home = () => {
                         data.length > 0 ? data.map((el, i) => {
                           
                             return (
-                                
+                               
                                 <>
-                             
-                                     <section className="Events">
+                                                         
+               <div className='bodys'>    
+                                 <section className="Events">
+          
+                         
                                      
-  <a className="Eimage" > <img id="ro" src={`/uploads/${el.userimg}`} height={200} width={262}/></a>
+  <a className="Eimage" > <img id="ro" src={`/uploads/${el.userimg}`} height={150} width={215}/></a>
   
 <div className='container'>
 
@@ -97,9 +109,9 @@ const Home = () => {
          
               <p className="mytitle">Description : {el.username}</p></div>
               <div className="add-img">
-      <div className="del">
+      <div className="dele">
           <button type="button" id='del'  onClick={() => dltUser(el.id)}>
-          Delete
+          Add to Cart
               <span className="list"></span>
           </button>
       </div>
@@ -107,15 +119,15 @@ const Home = () => {
       </div>
      
  </section>
-                                </>
+ </div>                   </>
                             )
                         }) : ""
                     }
-
+                   
                 </div>
             </div>
         </>
     )
 }
 
-export default Home;
+export default Home
