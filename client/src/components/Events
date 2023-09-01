@@ -1,20 +1,35 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes,faArrowRight,faArrowCircleLeft, faSearch, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes,faLocation,faArrowRight,faArrowCircleLeft, faSearch, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
-import partyPalaceImage from '../img/s/party.jpg';
-import party2 from '../img/s/bg.jpg';
+import party1 from '../img/s/Vault.jpg';
+import party2 from '../img/s/partty.jpg';
+import party3 from '../img/s/Luxor.jpg';
+import party4 from '../img/s/roll-x.jpg';
+import party5 from '../img/s/the-oriental.jpg';
+
 import wedd from '../img/s/lanWedd.avif'
 import wedd1 from '../img/s/kuriweed.jpg'
 import wedd2 from '../img/s/wedd.jpg'
 import wedd3 from '../img/s/sWeed.jpg'
+import wedd4 from '../img/s/Inter Luxury Hotel Weed.jpg'
+import wedd5 from '../img/s/RasW.jpg'
+import wedd7 from '../img/s/Sapphire.jpg'
+
 import grad from '../img/s/milliGradua.jpeg'
+import grad2 from '../img/s/unitygrad.jpg'
+import grad3 from '../img/s/SkyG.png'
 import meet from '../img/s/sMeet.jpg'
+import meet2 from '../img/s/HiltonMeet.avif'
+import meet3 from '../img/s/IntercontinentalMeet.jpg'
+import meet4 from '../img/s/elmosM.jpg'
+import meet5 from '../img/s/goldenM.jpg'
+
+import Footer from './Footer';
 
 
 
 
-import party3 from '../img/s/partty.jpg'
 import bg from '../img/s/bg2.avif'
 
 const Events = () => {
@@ -26,35 +41,63 @@ const Events = () => {
   const bestPlaces = [
     {
       id: 1,
-      name: 'Party Palace',
-      location: '123 Main St, City',
+      name: 'Luxor Club',
+      location: 'Addis Ababa, Ethiopia',
       description: 'A spacious venue with great amenities for parties.',
       imageUrl: party3,
     },
     {
       id: 2,
-      name: 'Funland Park',
-      location: '456 Elm St, Town',
+      name: 'The Republic Club',
+      location: 'Addis Ababa, Ethiopia',
       description: 'An amusement park with thrilling rides and party packages.',
       imageUrl: party2,
     },
     {
       id: 3,
-      name: 'Water World',
-      location: '789 Ocean Ave, Beachside',
+      name: 'The Vault Addis',
+      location: 'Addis Ababa, Ethiopia',
       description: 'A water park with exciting slides and wave pools.',
-      imageUrl: partyPalaceImage,
+      imageUrl: party1,
+    },
+    {
+      id: 4,
+      name: 'Roll-X Lounge',
+      location: 'Addis Ababa, Ethiopia',
+      description: 'A water park with exciting slides and wave pools.',
+      imageUrl: party4,
+    },
+    {
+      id: 5,
+      name: 'The Oriental',
+      location: 'Addis Ababa, Ethiopia',
+      description: 'A water park with exciting slides and wave pools.',
+      imageUrl: party5,
     },
     // Add more places as needed
   ];
   
   const wedding = [
+      {
+      id: 7,
+      name: 'Sapphire Addis Hotel',
+      location: 'AddisAbaba, Ethiopia',
+      description: 'A water park with exciting slides and wave pools.',
+      imageUrl:wedd7,
+    },
     {
       id: 1,
       name: 'Lake Langano',
       location: 'Ziway',
       description: 'A spacious venue with great amenities for parties.',
       imageUrl: wedd,
+    },
+    {
+      id: 5,
+      name: 'Inter Luxury Hotel',
+      location: 'AddisAbaba, Ethiopia',
+      description: 'A water park with exciting slides and wave pools.',
+      imageUrl:wedd4,
     },
     {
       id: 2,
@@ -72,34 +115,44 @@ const Events = () => {
     },
     {
       id: 4,
-      name: 'Water World',
-      location: '789 Ocean Ave, Beachside',
+      name: 'Skylight Hotel',
+      location: 'AddisAbaba, Ethiopia',
       description: 'A water park with exciting slides and wave pools.',
       imageUrl:wedd3,
     },
+   
+    {
+      id: 6,
+      name: 'Ras Amba Hotel',
+      location: 'AddisAbaba, Ethiopia',
+      description: 'A water park with exciting slides and wave pools.',
+      imageUrl:wedd5,
+    },
+  
   ]
     const Grad = [
       {
         id: 1,
-        name: 'Party Palace',
-        location: '123 Main St, City',
+        name: 'Millennium Hall',
+        location: 'Addis Ababa, Ethiopia',
         description: 'A spacious venue with great amenities for parties.',
         imageUrl: grad,
       },
       {
         id: 2,
-        name: 'Funland Park',
-        location: '456 Elm St, Town',
+        name: 'Unity Park',
+        location: 'Addis Ababa, Ethiopia',
         description: 'An amusement park with thrilling rides and party packages.',
-        imageUrl: party2,
+        imageUrl: grad2,
       },
       {
         id: 3,
-        name: 'Water World',
-        location: '789 Ocean Ave, Beachside',
+        name: 'Skyligh Hotel',
+        location: 'Addis Ababa, Ethiopia',
         description: 'A water park with exciting slides and wave pools.',
-        imageUrl: partyPalaceImage,
+        imageUrl: grad3,
       },
+      
   ];
 
   const Meet = [
@@ -112,17 +165,31 @@ const Events = () => {
     },
     {
       id: 2,
-      name: 'Funland Park',
+      name: 'Hilton Hotel',
       location: '456 Elm St, Town',
       description: 'An amusement park with thrilling rides and party packages.',
-      imageUrl: party2,
+      imageUrl: meet2,
     },
     {
       id: 3,
-      name: 'Water World',
-      location: '789 Ocean Ave, Beachside',
+      name: 'Intercontinental Hotel',
+      location: 'Addis Ababa, Ethiopia',
       description: 'A water park with exciting slides and wave pools.',
-      imageUrl: partyPalaceImage,
+      imageUrl: meet3,
+    },
+    {
+      id: 4,
+      name: 'Elmos Hotel',
+      location: 'Addis Ababa, Ethiopia',
+      description: 'A water park with exciting slides and wave pools.',
+      imageUrl: meet4,
+    },
+    {
+      id: 5,
+      name: 'Golden Tulip Hotel',
+      location: 'Addis Ababa, Ethiopia',
+      description: 'A water park with exciting slides and wave pools.',
+      imageUrl: meet5,
     },
 ];
 
@@ -184,8 +251,8 @@ const Events = () => {
     Meet [(currentMeet  + 1) % Meet .length]
   ];
   return (
-
-    <div className="bg-gray-300 ">
+    <>
+    <div className="bg-gray-300 mb-6 ">
       <header className="relative flex justify-between  items-center bg-purple-950 z-20">
 
       <div className="absolute top-0 left-0 w-full h-full bg-black  bg-opacity-75 flex flex-col justify-center items-center">
@@ -197,17 +264,18 @@ const Events = () => {
 
       
         <div className="flex items-center ml-auto space-x-4">
-          <nav className="hidden sm:flex space-x-4 absolute top-10 right-48 ">
-            <Link to="/" className="text-white   hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full">
-              Home
+          <nav className="hidden sm:flex space-x-4 absolute top-10 ml-36 right-48 mb-4 ">
+            <Link to="/" className="text-white text-sm  px-1  hover:bg-white hover:bg-opacity-10 p-2 rounded-full">
+            Events
             </Link>
-            <Link to="/about" className="text-white  text-sm  hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full">
+            <Link to="/register" className="text-white  text-sm px-1 hover:bg-white hover:bg-opacity-10 p-2 rounded-full">
+              Suggestions
+            </Link>
+            <Link to="/about" className="text-white  text-sm px-1 hover:bg-white hover:bg-opacity-10  p-2 rounded-full">
               About
             </Link>
-            <Link to="/register" className="text-white  text-sm  hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full">
-              Services
-            </Link>
-            <Link to="/contact" className="text-white  text-sm  hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full">
+           
+            <Link to="/contact" className="text-white  text-sm px-1 hover:bg-white hover:bg-opacity-10 p-2 rounded-full">
               Contact
             </Link>
           </nav>
@@ -242,14 +310,15 @@ const Events = () => {
         <div className="sm:hidden bg-gray-400 absolute top-16 right-4 bg-opacity-10">
           <nav className="px-2 pt-2 pb-2 space-y-1">
             <Link to="/" className="block text-white hover:text-white">
-              Home
+            Events
+            </Link>
+            <Link to="/events" className="block text-white hover:text-white">
+              Suggestions
             </Link>
             <Link to="/suggestion" className="block text-white hover:text-white">
               About
             </Link>
-            <Link to="/events" className="block text-white hover:text-white">
-              Services
-            </Link>
+            
             <Link to="/contact" className="block text-white hover:text-white">
               Contact
             </Link>
@@ -272,9 +341,9 @@ const Events = () => {
     className="w-full h-auto object-cover opacity-75"
     style={{ maxHeight: '600px' }}
   /> 
-  <div className="absolute top-0 right-0 w-full h-full bg-black text-white bg-opacity-50 flex flex-col justify-center items-center" />
+  <div className="absolute top-0 right-0 w-full h-full bg-black text-white bg-opacity-80 flex flex-col justify-center items-center" />
   <div className="absolute top-0 left-0 w-3/5 p-4 h-full bg-white mb-32 text-white bg-opacity-5 flex flex-col justify-center items-center">
-    <p className="font-bold lg:text-3xl md:text-3xl sm:text-xl  leading-tight text-center">
+    <p className="font-bold lg:text-3xl md:text-3xl sm:lg:text-xl md:text-xl sm:text-md  leading-tight text-center">
       Discover the perfect places for your special moments.
     </p>
     <p className="text-lg  leading-tight text-center pt-6">
@@ -287,21 +356,22 @@ const Events = () => {
   </div>
 </div>
 
-<div className="mx-auto bg-gray-300">
-  <h1 className="text-xl text-black mb-2 text-center pt-4">Top Categories with Preferable Venues and Hotels Places</h1>
-  <h1 className="text-lg text-black mb-2 text-center">For Special Moments</h1>
+<div className="mx-8 bg-gray-300 mb-6">
+  <h1 className="lg:text-xl md:text-xl sm:text-md text-black mb-2 font-bold text-center pt-4">Top Categories with Preferable Venues and Hotels Places</h1>
+  <h1 className="text-lg text-black mb-2 font-bold text-center">For Special Moments</h1>
+  <h1 className="text-lg text-black font-bold mb-2 text-left">Best Places for Birthday</h1>
 
-  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
     {visiblePlaces.map((place, index) => (
       <div
         key={place.id}
         className="bg-white rounded-md overflow-hidden shadow-lg relative"
       >
-        <div className="h-64 md:h-48 lg:h-64">
+        <div className="h-64 md:h-48 lg:h-64 ">
           <img className="h-full w-full object-cover" src={place.imageUrl} alt={place.name} />
           {index === 0 && (
             <button
-              className="bg-gray-800 text-white py-2 px-4 rounded-l-md absolute top-1/2 left-4 transform -translate-y-1/2"
+              className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 left-2 transform -translate-y-1/2"
               onClick={goToPreviousSlide}
             >
               <FontAwesomeIcon icon={faArrowLeft} className="w-4 h-4" />
@@ -309,25 +379,26 @@ const Events = () => {
           )}
           {index === 1 && (
             <button
-              className="bg-gray-800 text-white py-2 px-4 rounded-r-md absolute top-1/2 right-4 transform -translate-y-1/2"
+              className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 right-2 transform -translate-y-1/2"
               onClick={goToNextSlide}
             >
               <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
             </button>
           )}
         </div>
-        <div className="p-1 absolute bottom-0 left-0 w-1/3 h-16 bg-white bg-opacity-75">
-          <h2 className="text-xl font-bold mb-1 text-black">{place.name}</h2>
-          <p className="text-black mb-4">{place.location}</p>
+        <div className="p-1 absolute bottom-0 left-0 w-64 h-16 bg-white bg-opacity-75">
+          <h2 className="lg:text-xl md:text-xl sm:text-md font-bold mb-1 text-black">{place.name}</h2>
+ <p className="text-black mb-4">          <FontAwesomeIcon icon={faLocation} className="w-4 h-4" />
+{place.location}</p>
         </div>
       </div>
     ))}
   </div>
 
       </div>
-      <div className="mx-2 mt-8">
-  <h1 className="text-xl font-bold text-black mb-6 text-left">Best Places for a Wedding</h1>
-  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="mx-8 mt-8">
+  <h1 className="lg:text-xl md:text-xl sm:text-md font-bold text-black mb-6 text-left">Best Places for a Wedding</h1>
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
     {visibleWeddingPlaces.map((place, index) => (
       <div
         key={place.id}
@@ -338,7 +409,7 @@ const Events = () => {
           <div className="absolute inset-0 flex items-center justify-between">
             {index === 0 && (
               <button
-                className="bg-gray-800 text-white py-2 px-4 rounded-l-md"
+                className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 left-2 transform -translate-y-1/2"
                 onClick={goToPreviousWeddingSlide}
               >
                 <FontAwesomeIcon icon={faArrowLeft} className="w-4 h-4" />
@@ -346,7 +417,7 @@ const Events = () => {
             )}
             {index === 1 && (
               <button
-                className="bg-gray-800 text-white py-2 px-4 rounded-r-md"
+                className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 right-2 transform -translate-y-1/2"
                 onClick={goToNextWeddingSlide}
               >
                 <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
@@ -354,18 +425,19 @@ const Events = () => {
             )}
           </div>
         </div>
-        <div className="p-1 absolute bottom-0 left-0 w-1/3 h-16 bg-white bg-opacity-75">
-          <h2 className="text-xl font-bold mb-1 text-black">{place.name}</h2>
-          <p className="text-black mb-4">{place.location}</p>
+        <div className="p-1 absolute bottom-0 left-0 w-64 h-16 bg-white bg-opacity-75">
+          <h2 className="lg:text-xl md:text-xl sm:text-md font-bold mb-1 text-black">{place.name}</h2>
+          <p className="text-black mb-4"><FontAwesomeIcon icon={faLocation} className="w-4 h-4" />
+{place.location}</p>
         </div>
       </div>
     ))}
   </div>
       </div>
 
-      <div className="mx-2 mt-8">
-  <h1 className="text-xl font-bold text-black mb-4 text-left">Best Places for a Graduation</h1>
-  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="mx-8 mt-8">
+  <h1 className="lg:text-xl md:text-xl sm:text-md font-bold text-black mb-4 text-left">Best Places for a Graduation</h1>
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
     {visibleGrad.map((place, index) => (
       <div
         key={place.id}
@@ -376,7 +448,7 @@ const Events = () => {
           {index === 0 && (
             <div className="absolute inset-0 flex items-center justify-between">
               <button
-                className="bg-gray-800 text-white py-2 px-4 rounded-l-md"
+                className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 left-2 transform -translate-y-1/2"
                 onClick={goToPreviousGrad}
               >
                 <FontAwesomeIcon icon={faArrowLeft} className="w-4 h-4" />
@@ -386,7 +458,7 @@ const Events = () => {
           {index === 1 && (
             <div className="absolute inset-0 flex items-center justify-between">
               <button
-                className="bg-gray-800 text-white py-2 px-4 rounded-r-md"
+                className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 right-2 transform -translate-y-1/2"
                 onClick={goToNextGrad}
               >
                 <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
@@ -394,9 +466,10 @@ const Events = () => {
             </div>
           )}
         </div>
-        <div className="p-1 absolute bottom-0 left-0 w-1/3 bg-white h-16 bg-opacity-75">
-          <h2 className="text-xl font-bold mb-1 text-black">{place.name}</h2>
-          <p className="text-black mb-4">{place.location}</p>
+        <div className="p-1 absolute bottom-0 left-0 w-64 bg-white h-16 bg-opacity-75">
+          <h2 className="lg:text-xl md:text-xl sm:text-md font-bold mb-1 text-black">{place.name}</h2>
+          <p className="text-black mb-4"> <FontAwesomeIcon icon={faLocation} className="w-4 h-4" />
+{place.location}</p>
         </div>
       </div>
     ))}
@@ -405,9 +478,9 @@ const Events = () => {
 
         
   
-<div className="mx-2 mt-8">
-  <h1 className="text-xl font-bold text-black mb-4 text-left">Best Places for a Meeting</h1>
-  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
+<div className="mx-8 mt-8 ">
+  <h1 className="lg:text-xl md:text-xl sm:text-md font-bold text-black mb-4 text-left">Best Places for a Meeting</h1>
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
     {visibleMeet.map((place, index) => (
       <div
         key={place.id}
@@ -417,7 +490,7 @@ const Events = () => {
           <img className="h-full w-full object-cover" src={place.imageUrl} alt={place.name} />
           {index === 0 && visibleMeet.length > 1 && (
             <button
-              className="bg-gray-800 text-white py-2 px-4 rounded-l-md absolute top-1/2 left-4 transform -translate-y-1/2"
+              className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 left-2 transform -translate-y-1/2"
               onClick={goToPreviousMeet}
             >
               <FontAwesomeIcon icon={faArrowLeft} className="w-4 h-4" />
@@ -425,16 +498,17 @@ const Events = () => {
           )}
           {index === 1 && visibleMeet.length > 1 && (
             <button
-              className="bg-gray-800 text-white py-2 px-4 rounded-r-md absolute top-1/2 right-4 transform -translate-y-1/2"
+              className="bg-white text-black py-2 px-2 rounded-full bg-opacity-80 w-10 h-10 items-center -my-6 absolute top-1/2 right-2 transform -translate-y-1/2"
               onClick={goToNextMeet}
             >
               <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
             </button>
           )}
         </div>
-        <div className="p-1 absolute bottom-0 left-0 w-1/3 bg-white h-16 bg-opacity-75">
-          <h2 className="text-xl font-bold mb-1 text-black">{place.name}</h2>
-          <p className="text-black mb-4">{place.location}</p>
+        <div className="p-1 absolute bottom-0 left-0 w-64 bg-white h-16 bg-opacity-75">
+          <h2 className="lg:text-xl md:text-xl sm:text-md font-bold mb-1 text-black">{place.name}</h2>
+          <p className="text-black mb-4"><FontAwesomeIcon icon={faLocation} className="w-4 h-4" />
+{place.location}</p>
         </div>
       </div>
     ))}
@@ -442,6 +516,8 @@ const Events = () => {
  
 </div>
     </div>
+    <Footer/>
+   </>
   );
 };
 
