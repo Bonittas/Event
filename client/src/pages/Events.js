@@ -2,35 +2,35 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes,faLocation,faArrowRight,faArrowCircleLeft, faSearch, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
-import party1 from '../img/s/Vault.jpg';
-import party2 from '../img/s/partty.jpg';
-import party3 from '../img/s/Luxor.jpg';
-import party4 from '../img/s/roll-x.jpg';
-import party5 from '../img/s/partty.jpg';
+import party1 from '../img/s/Catagories/Vault.jpg';
+import party2 from '../img/s/Catagories/partty.jpg';
+import party3 from '../img/s/Catagories/Luxor.jpg';
+import party4 from '../img/s/Catagories/roll-x.jpg';
+import party5 from '../img/s/Catagories/partty.jpg';
 
-import wedd from '../img/s/lanWedd.avif'
-import wedd1 from '../img/s/kuriweed.jpg'
-import wedd2 from '../img/s/wedd.jpg'
-import wedd3 from '../img/s/sWeed.jpg'
-import wedd4 from '../img/s/Inter Luxury Hotel Weed.jpg'
-import wedd5 from '../img/s/RasW.jpg'
-import wedd7 from '../img/s/Sapphire.jpg'
+import wedd from '../img/s/Catagories/lanWedd.avif'
+import wedd1 from '../img/s/Catagories/kuriweed.jpg'
+import wedd2 from '../img/s/Catagories/wedd.jpg'
+import wedd3 from '../img/s/Catagories/sWeed.jpg'
+import wedd4 from '../img/s/Catagories/Inter Luxury Hotel Weed.jpg'
+import wedd5 from '../img/s/Catagories/RasW.jpg'
+import wedd7 from '../img/s/Catagories/Sapphire.jpg'
 
-import grad from '../img/s/milliGradua.jpeg'
-import grad2 from '../img/s/unitygrad.jpg'
-import grad3 from '../img/s/SkyG.png'
-import meet from '../img/s/sMeet.jpg'
-import meet2 from '../img/s/HiltonMeet.avif'
-import meet3 from '../img/s/IntercontinentalMeet.jpg'
-import meet4 from '../img/s/elmosM.jpg'
-import meet5 from '../img/s/goldenM.jpg'
+import grad from '../img/s/Catagories/milliGradua.jpeg'
+import grad2 from '../img/s/Catagories/unitygrad.jpg'
+import grad3 from '../img/s/Catagories/SkyG.png'
+import meet from '../img/s/Catagories/sMeet.jpg'
+import meet2 from '../img/s/Catagories/HiltonMeet.avif'
+import meet3 from '../img/s/Catagories/IntercontinentalMeet.jpg'
+import meet4 from '../img/s/Catagories/elmosM.jpg'
+import meet5 from '../img/s/Catagories/goldenM.jpg'
 
 import Footer from '../components/Footer';
 
 
 
 
-import bg from '../img/s/bg2.avif'
+import bg from '../img/s/Catagories/bg2.avif'
 
 const Events = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
