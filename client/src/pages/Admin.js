@@ -5,7 +5,7 @@ import { faMapMarkerAlt, faCalendarAlt, faClock, faBars, faTimes } from '@fortaw
 import axios from 'axios';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import myImage from '../img/dg.avif';
+import myImage from '../img/s/events/dg.avif';
 import Categories from './Catagories';
 
 function Admin({ handleMenuToggle, isMenuOpen }) {
