@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header2 from '../components/Header2';
 import Footer from '../components/Footer';
-import myImage from '../img/dg.avif';
+import myImage from '../img/s/events/dg.avif';
 
 
 const Addsugg = () => {
