@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../img/cont.avif';
+import img from '../img/s/events/cont.avif';
 import Header from '../components/Header2';
 import Footer from '../components/Footer';
 const About = () => {
