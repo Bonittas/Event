@@ -1,10 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React,{useState} from 'react';
+import { Link,useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import myImage from '../img/s/events/dg.avif';
 
 function Header({ handleMenuToggle, isMenuOpen }) {
+  const [activePage, setActivePage] = useState('');
+  const location = useLocation();
+
+  const handlePageChange = (page) => {
+    setActivePage(page);
+  };
+
+  const currentPath = location.pathname;
+  React.useEffect(() => {
+    setActivePage(currentPath);
+  }, [currentPath]);
   return (
     <header className="relative flex justify-between  items-center bg-purple-950">
       <img
@@ -22,29 +33,42 @@ function Header({ handleMenuToggle, isMenuOpen }) {
  </div>
         <div className="flex items-center ml-auto space-x-4 ">
           <nav className="hidden sm:flex space-x-4 text-sm  absolute top-10 right-48">
-            <Link
-              to="/"
-              className="text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
-              Events
-            </Link>
+          <Link
+          to="/"
+          onClick={() => handlePageChange('/')}
+          className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+            activePage === '/' ? 'active' : ''
+          }`}
+          style={activePage === '/' ? { backgroundColor: 'rgb(110, 20, 180)' } : null} 
+        >
+          Events
+        </Link>
             <Link
               to="/suggestion"
-              className="text-white text-sm hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/suggestion' ? 'active' : ''
+              }`}
+              style={activePage === '/suggestion' ? { backgroundColor: 'rgb(110, 20, 180)' } : null}             >
               Suggestions
             </Link>
             <Link
               to="/about"
-              className="text-white text-sm hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/about' ? 'active' : ''
+              }`}
+              style={activePage === '/about' ? { backgroundColor: 'rgb(110, 20, 180)' } : null}             >
               About
             </Link>
 
             <Link
               to="/admin"
-              className="text-white text-sm hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/contact' ? 'active' : ''
+              }`}
+              style={activePage === '/contact' ? { backgroundColor: 'rgb(110, 20, 180)' } : null}             >
               Contact
             </Link>
           </nav>
