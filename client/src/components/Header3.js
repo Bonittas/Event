@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import myImage from '../img/s/sugg/hotte.jpg';
 
 function Header3() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const [activePage, setActivePage] = useState('');
+  const location = useLocation();
+
+  const handlePageChange = (page) => {
+    setActivePage(page);
+  };
+
+  const currentPath = location.pathname;
+  React.useEffect(() => {
+    setActivePage(currentPath);
+  }, [currentPath]);
 
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);}
@@ -32,10 +44,13 @@ function Header3() {
             >
               Events
             </Link>
-            <Link
+             <Link
               to="/suggestion"
-              className="text-white text-sm hover:bg-blue-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/suggestion' ? 'active' : ''
+              }`}
+              style={activePage === '/suggestion' ? { backgroundColor: 'rgb(70, 120, 250)' } : null}             >
               Suggestions
             </Link>
             <Link
@@ -81,8 +96,14 @@ function Header3() {
             <Link to="/" className="block text-white hover:text-white">
               Events
             </Link>
-            <Link to="/suggestion" className="block text-white hover:text-white">
-             Suggestions
+            <Link
+              to="/suggestion"
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/suggestion' ? 'active' : ''
+              }`}
+              style={activePage === '/suggestion' ? { backgroundColor: 'rgb(70, 120, 250)' } : null}             >
+              Suggestions
             </Link>
             <Link to="/about" className="block text-white hover:text-white">
             About
