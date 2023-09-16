@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 
 
 function Header2() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const [activePage, setActivePage] = useState('');
+  const location = useLocation();
+
+  const handlePageChange = (page) => {
+    setActivePage(page);
+  };
+
+  const currentPath = location.pathname;
+  React.useEffect(() => {
+    setActivePage(currentPath);
+  }, [currentPath]);
 
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);}
@@ -30,21 +42,30 @@ function Header2() {
             </Link>
             <Link
               to="/suggestion"
-              className="text-white text-sm hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/suggestion' ? 'active' : ''
+              }`}
+              style={activePage === '/suggestion' ? { backgroundColor: 'rgb(110, 20, 180)' } : null}             >
               Suggestions
             </Link>
             <Link
               to="/about"
-              className="text-white text-sm hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/about' ? 'active' : ''
+              }`}
+              style={activePage === '/about' ? { backgroundColor: 'rgb(110, 20, 180)' } : null}             >
               About
             </Link>
 
             <Link
               to="/contact"
-              className="text-white text-sm hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full"
-            >
+              onClick={() => handlePageChange('/')}
+              className={`text-white hover:bg-purple-500 hover:bg-opacity-10 px-2 rounded-full ${
+                activePage === '/contact' ? 'active' : ''
+              }`}
+              style={activePage === '/contact' ? { backgroundColor: 'rgb(110, 20, 180)' } : null}             >
               Contact
             </Link>
           </nav>
