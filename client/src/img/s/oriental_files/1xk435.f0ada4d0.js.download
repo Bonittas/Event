@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["1xk435",(e,t)=>{var a,i=()=>a({isEnabled:!0,param:"detailId",pages:["Attraction_Review"],locales:["es-ES"],modData:{mod:54,modSet:[2,4,5,9,11,12,13,18,19,21,22,24,25,29,31,34,35,36,38,39,40,46,47,48,51,52,53]}});return[()=>{e("useAttractionReviewTitleDivToH2",i)},[e=>a=e.useModTest]]},["46822j"]]);

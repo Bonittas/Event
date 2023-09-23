@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Validation from './SignupValidation';
 import axios from 'axios';
-import myImage from '../dg.avif';
-import Header2 from '../components/Header2';
+import myImage from '../img/s/sugg/hotte.jpg';
+import Header2 from '../components/Header3';
 import Footer from '../components/Footer';
 function Signup() {
   const [values, setValues] = useState({
@@ -41,11 +41,10 @@ function Signup() {
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex flex-col justify-center items-center"
 />
 
-          <div className=' items-end  '>
             <Header2 />
-          </div>      
-          <div className="flex justify-center items-center my-2 container ">
-        <div className="w-full max-w-md p-3 mb-6 bg-purple-950 bg-opacity-30 shadow-lg rounded-lg absolute top-24 shadow-lg ">
+            
+          <div className="flex justify-center items-center mx-2  ">
+        <div className="w-full max-w-md mx-2 p-4 bg-blue-600 bg-opacity-10 shadow-lg rounded-lg absolute top-32 ">
           <h2 className="text-2xl font-bold mb-3 text-center text-white">Sign Up</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
@@ -57,7 +56,7 @@ function Signup() {
                 placeholder="Enter Name"
                 name="name"
                 onChange={handleInput}
-                className="w-full px-3 py-2 rounded border border-purple-300 bg-purple-950 bg-opacity-30 focus:outline-none focus:border-purple-500"
+                className="w-full px-3 py-2 rounded border border-blue-300 text-white bg-blue-950 bg-opacity-90 focus:outline-none focus:border-blue-500 "
               />
               {errors.name && (
                 <span className="text-red-500 text-sm">{errors.name}</span>
@@ -72,7 +71,7 @@ function Signup() {
                 placeholder="Enter Email"
                 name="email"
                 onChange={handleInput}
-                className="w-full px-3 py-2 rounded border border-purple-300 bg-purple-950 bg-opacity-30 focus:outline-none focus:border-purple-500"
+                className="w-full px-3 py-2 rounded border border-blue-300 text-white bg-blue-950 bg-opacity-80 focus:outline-none focus:border-blue-500"
               />
               {errors.email && (
                 <span className="text-red-500 text-sm">{errors.email}</span>
@@ -87,7 +86,7 @@ function Signup() {
                 placeholder="Enter Password"
                 name="password"
                 onChange={handleInput}
-                className="w-full px-3 py-2 rounded border border-purple-300 bg-purple-950 bg-opacity-30 focus:outline-none focus:border-purple-500"
+                className="w-full px-3 py-2 text-white rounded border border-blue-300 bg-blue-950 bg-opacity-80 focus:outline-none focus:border-blue-500"
               />
               {errors.password && (
                 <span className="text-red-500 text-sm">
@@ -98,7 +97,7 @@ function Signup() {
             <div className="flex justify-between items-center">
               <button
                 type="submit"
-                className="px-4 py-2 text-white bg-purple-950 rounded hover:bg-purple-900 focus:outline-none"
+                className="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700 focus:outline-none"
               >
                 Sign up
               </button>
@@ -114,7 +113,8 @@ function Signup() {
       </div>
       </div>
       </div>
-      <Footer/>
+      <div className='bg-blue-600'><Footer/>
+      </div>
     </>
   );
 }

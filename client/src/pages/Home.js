@@ -1,16 +1,20 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef,Suspense } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faCalendarAlt, faClock, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faCalendarAlt, faClock, faSearch} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 import moment from 'moment';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Categories from './Catagories';
+import img1 from '../img/s/events/scie.jpg'
+import img2 from '../img/s/events/bazz.jpg'
+import img3 from '../img/s/events/rophnan.jpg'
+import img4 from '../img/s/events/artt.jpg'
+import img5 from '../img/s/events/run4.png'
 
 const Home = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
   const [data, setData] = useState([]);
   const [show, setShow] = useState(false);
   const [filteredEvents, setFilteredEvents] = useState([]);
@@ -18,8 +22,10 @@ const Home = () => {
   const navigate = useNavigate();
   const searchResultsRef = useRef(null);
 
+  const MyComponent = React.lazy(() => import('./Catagories'));
+
   const handleSearchChange = (e) => {
-    e.preventDefault(); // Prevent form submission
+    e.preventDefault();
     setSearchQuery(e.target.value);
     filterEvents(e.target.value);
   };
@@ -46,6 +52,50 @@ const Home = () => {
       searchResultsRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const visiblePlaces = [
+    {
+      id: 4,
+      name: 'Art Exhibition',
+      location: '5 kilo Museum, Addis Ababa',
+      Time: '7AM - 11AM',
+      Date:'Sep 21 2023',
+      imageUrl: img4,
+    },
+    {
+      id: 1,
+      name: 'Science Exhibition',
+      location: 'Arat Kilo, Addis Ababa',
+      Time: ' 8AM - 4PM    ',
+      Date : 'Aug 10 2023',
+      imageUrl: img1,
+    },
+    {
+      id: 2,
+      name: 'Bazzar',
+      location: 'Merchato, Addis Ababa',
+      Time: '7AM - 6PM',
+      Date:'Sep 29 2023',
+      imageUrl: img2,
+    },
+    {
+      id: 3,
+      name: 'Concert: Rophnan',
+      location: 'Sky Light Hotel, Addis Ababa',
+      Time: '6PM',
+      Date:'Oct 23 2023',     
+       imageUrl: img3,
+    },
+    
+    {
+      id: 5,
+      name: 'Ethiopian Great Run',
+      location: 'Addis Ababa, Ethiopia',
+      Time: '6AM - 11AM',
+      Date:'Oct 11 2023',     
+      imageUrl: img5,
+    },
+  ];
 
   useEffect(() => {
     getUserData();
@@ -75,7 +125,9 @@ const Home = () => {
       <Header setSearchQuery={setSearchQuery} handleMenuToggle={handleMenuToggle} isMenuOpen={isMenuOpen} />
 
       <div className="mb-6 bg-gray-300">
+      <Suspense fallback={<div>Loading...</div>}>
         <Categories />
+        </Suspense>
       </div>
    
       <form className="items-center text-center mx-auto absolute top-16 md:top-32 lg:top-32 justify-center w-full">
@@ -97,19 +149,44 @@ const Home = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-purple-950 hover:bg-purple-700 text-white font-bold lg:h-16 md:h-16 sm:h-10 py-2 px-4 rounded-r-full absolute right-0 top-0"
+                  className="bg-purple-950 hover:bg-purple-900 text-white font-bold lg:h-16 md:h-16 sm:h-10 py-2 px-4 rounded-r-full absolute right-0 top-0"
                   onClick={handleFormSubmit}
                 >
-                  <FontAwesomeIcon icon={faSearch} />
+                  <div className='whitespace-nowrap px-2'>Search<FontAwesomeIcon
+  icon={faSearch}
+  style={{ marginLeft: '0.5rem' }}
+/></div>
                 </button>
               </div>
             </div>
           </>
         ) : null}
       </form>
+      <p className="text-3xl text-center font-bold py-4">Explore Currently Available Events</p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4">
+    {visiblePlaces.map((place, index) => (
+      <div
+        key={place.id}
+        className="bg-white rounded-md overflow-hidden shadow-lg relative"
+      >
+        <div className="h-64 md:h-48 lg:h-64 ">
+          <img className="h-full w-full object-cover" src={place.imageUrl} alt={place.name} />
+         
+         
+        </div>
+        <div className="p-1  bg-white bg-opacity-75">
+          <h2 className="lg:text-lg md:text-md sm:text-md  mb-1 text-black font-cursive">{place.name}</h2>
+ <p className="text-black mb-3">          <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4 text-gray-400" />
+{place.location}</p>
+<p className='mb-3'> <FontAwesomeIcon icon={faClock} className="w-4 h-4 text-gray-400" />{place.Time}</p>
+<p className='mb-3'> <FontAwesomeIcon icon={faCalendarAlt} className="w-4 h-4 text-gray-400" />{place.Date}</p>
+        </div>
+      </div>
+    ))}
+  </div>
       <div className="container mx-auto mt-2 mb-8">
   <div className="mt-8">
-    <p className="text-3xl text-center font-bold py-4">Explore Currently Available Events</p>
     <div ref={searchResultsRef} className="lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 grid  justify-start">
       {filteredEvents.length > 0 ? (
         filteredEvents.map((el) => (
@@ -147,13 +224,15 @@ const Home = () => {
           </div>
         ))
       ) : (
-        <div className="text-center">No results found</div>
+        <div className="text-center">No more results found for now</div>
       )}
     </div>
   </div>
 </div>
+<div className='bg-purple-950'>
+  <Footer />
+</div>
 
-<Footer />
     </>
   );
 };

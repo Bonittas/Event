@@ -1,6 +1,6 @@
 import React from 'react';
-import img from '../cont.avif';
-import Header from '../components/Header';
+import img from '../img/s/events/cont.jpg';
+import Header from '../components/Header2';
 import Footer from '../components/Footer';
 const About = () => {
   return (
@@ -39,7 +39,9 @@ const About = () => {
         </div>
       </div>
     </section>
+    <div className='bg-purple-950 '>
     <Footer/>
+    </div>
     </>
   );
 };

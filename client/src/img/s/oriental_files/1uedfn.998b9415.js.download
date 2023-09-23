@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["1uedfn",(r,e)=>{var t=r=>{if(null==r)return{};var e={};return Object.entries(r).forEach(([r,t])=>{null!=t&&(e[`data-${r}`.replace(/[A-Z]/g,r=>`-${r.toLowerCase()}`)]=String(t))}),e};return[()=>{r("default",t)},[]]},[]]);

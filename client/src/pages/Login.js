@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import Validation from './LoginValidation';
-import myImage from '../dg.avif';
-import Header2 from '../components/Header2';
+import myImage from '../img/s/sugg/hotte.jpg';
+import Header2 from '../components/Header3';
 import Footer from '../components/Footer'
 
 function Login() {
@@ -55,14 +55,13 @@ function Login() {
   return (
     <>
       <div className="z-20">
-        <div className="w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url(${myImage})` }}>
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex flex-col justify-center items-center" />
 
           <div className="items-end z-20">
             <Header2 />
           </div>
-          <div className="flex justify-center p-3 items-center relative mx-2">
-            <div className="w-full max-w-md p-4 bg-purple-950 bg-opacity-30 shadow-lg rounded-lg">
+<div className='mx-2'>
+          <div className="flex justify-center items-center  ">
+            <div className="w-full max-w-md  p-4 bg-blue-600 bg-opacity-10 shadow-lg rounded-lg absolute top-32">
               <div className="text-2xl font-bold mb-4 text-center text-white">Log In</div>
               {backendError.length > 0 && (
                 <div className="mb-4">
@@ -74,7 +73,7 @@ function Login() {
                 </div>
               )}
               <form onSubmit={handleSubmit}>
-                <div className="mb-6">
+                <div className="mb-6 ">
                   <label htmlFor="email" className="block mb-2 font-medium text-white">
                     Email
                   </label>
@@ -83,7 +82,7 @@ function Login() {
                     placeholder="Enter Email"
                     name="email"
                     onChange={handleInput}
-                    className="w-full px-3 py-2 bg-purple-800 bg-opacity-10 text-white rounded border border-purple-300 focus:outline-none focus:border-purple-500"
+                    className="w-full px-3 py-2 rounded border border-blue-300 bg-blue-950 bg-opacity-90 text-white focus:outline-none focus:border-blue-500 "
                   />
                   {errors.email && <span className="text-red-500">{errors.email}</span>}
                 </div>
@@ -96,11 +95,11 @@ function Login() {
                     placeholder="Enter Password"
                     name="password"
                     onChange={handleInput}
-                    className="w-full px-3 py-2 rounded bg-purple-800 bg-opacity-10 border text-white border-purple-300 focus:outline-none focus:border-purple-500"
+                    className="w-full px-3 py-2 rounded border border-blue-300 bg-blue-950 bg-opacity-90 text-white focus:outline-none focus:border-blue-500 "
                   />
                   {errors.password && <span className="text-red-500">{errors.password}</span>}
                 </div>
-                <button type="submit" className="w-full px-4 py-2 text-white bg-purple-800 rounded hover:bg-purple-900 focus:outline-none">
+                <button type="submit" className="w-full px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-800 focus:outline-none">
                   Log in
                 </button>
                 <p className="mt-4 text-center text-white">
@@ -110,8 +109,10 @@ function Login() {
             </div>
           </div>
         </div>
-      </div>
-      <Footer/>
+        </div>
+      <div className='bg-blue-600'>
+  <Footer />
+</div>
     </>
   );
 }

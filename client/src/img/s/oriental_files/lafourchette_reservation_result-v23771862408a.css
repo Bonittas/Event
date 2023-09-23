@@ -1,0 +1,181 @@
+#RSV_CONFIRM.lafourchette input[type=text] {
+  margin-right: 10px;
+}
+
+#RSV_CONFIRM.lafourchette .title {
+  width: 65px;
+}
+
+#RSV_CONFIRM.lafourchette .rsv_brand img {
+  width: auto;
+  height: 14px;
+  margin-top: -2px; 
+}
+#RSV_CONFIRM.lafourchette .firstname {
+  width: 332px;
+}
+
+#RSV_CONFIRM.lafourchette .rsv_info {
+  float: left;
+  width: 55%;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+  box-shadow: none;
+}
+
+#RSV_CONFIRM.lafourchette .acceptAgreement a {
+  text-decoration: underline;
+}
+
+#RSV_CONFIRM.lafourchette #RESERVATION_CONFIRM {
+  padding: 15px 0 0;
+  margin-top: 50px;
+  border-top: 1px solid #CFCFCF;
+  box-shadow: inset 0 0 0 #FFF,0 0 1px #FFF;
+}
+
+#RSV_CONFIRM.lafourchette .eatery_info {
+  padding-top: 0px;
+}
+
+#RSV_CONFIRM.lafourchette .asterisk {
+  float: left;
+  margin-left: 5px;
+}
+
+#RSV_CONFIRM.lafourchette input[type=text].countryNum, #RSV_CONFIRM.lafourchette select.countryNum {
+  width: 50px;
+  margin-right: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#RSV_CONFIRM.lafourchette select.countryNum {
+  height: 32px;
+  width: 62px;
+}
+
+
+.rtl #RSV_CONFIRM.lafourchette select.countryNum {
+  float: left;
+}
+
+#RSV_CONFIRM.lafourchette .phone {
+  width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#RSV_CONFIRM.lafourchette .specialOfferImg {
+  margin-top: 2px;
+}
+
+#RSV_CONFIRM.lafourchette .exclusions {
+  line-height: 15px; 
+  margin-bottom: 10px;
+  margin-left: 20px;
+  color: #2C2C2C;
+}
+
+#RSV_CONFIRM.lafourchette .rsvErrorWrap {
+  height: 40px;
+}
+
+#RSV_CONFIRM.lafourchette #RSV_CONFIRM_ERROR_MSG {
+  float: left;
+  color: red;
+  background-color: rgba(255,0,0,0.1);
+  width: 40%;
+  padding: 5px;
+  font-weight: bold;
+}
+
+#RSV_CONFIRM.lafourchette .checkboxLabel {
+  cursor: pointer;
+}
+
+#RSV_CONFIRM.lafourchette .acceptAgreement,
+#RSV_CONFIRM.lafourchette .optionalEmail {
+  margin-bottom: 10px;
+} 
+
+#RSV_CONFIRM.lafourchette .error {
+  font-weight: bold;
+  color: red;
+  border: 1px solid red!important;
+}
+
+#RSV_CONFIRM.lafourchette .errorCheckBox .checkboxLabel {
+  border-bottom: 2px solid red;
+}
+
+#RSV_CONFIRM.lafourchette input[type=text].lastname, 
+#RSV_CONFIRM.lafourchette input[type=text].phone {
+  margin-right: 0px;
+}
+
+#RSV_CONFIRM.lafourchette .reserveButton {
+  border-radius: 3px;
+  padding: 6px 11px;
+  font-weight: bold;
+  font-size: 1.3335em;
+  box-shadow: 0px 1px 2px #888;
+  display: inline;
+  vertical-align: middle;
+  cursor: pointer;
+  
+  background: #fee5a4;
+  background: linear-gradient(top, #fee5a4 0%, #fec103 100%);
+  background: -o-linear-gradient(top, #fee5a4 0%, #fec103 100%);
+  background: -moz-linear-gradient(top, #fee5a4 0%, #fec103 100%);
+  background: -webkit-linear-gradient(top, #fee5a4 0%, #fec103 100%);
+  background: -webkit-gradient(linear, top, bottom, color-stop(0%, #fee5a4), color-stop(100%, #fec103));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffee5a4', endColorstr='#fffec103' );
+}
+
+#RSV_CONFIRM.lafourchette .reserveButton:hover {
+  background:#f1b700;
+  background:linear-gradient(top, #f1b700 0%, #fec103 100%);
+  background:-o-linear-gradient(top, #f1b700 0%, #fec103 100%);
+  background:-moz-linear-gradient(top, #f1b700 0%, #fec103 100%);
+  background:-webkit-linear-gradient(top, #f1b700 0%, #fec103 100%);
+  background:-webkit-gradient(linear, top, bottom, color-stop(0%, #f1b700), color-stop(100%, #fec103));
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff1b700', endColorstr='#fffec103' );
+}
+
+#RSV_CONFIRM.lafourchette .nextScreen {
+  display: inline;
+  position: relative;
+  top: 9px;
+  left: 5px;
+}
+
+#RSV_CONFIRM.lafourchette .nextScreen.hidden {
+  display: none;
+}
+
+.interstitial.lafourchette {
+  text-align: center; 
+  height: 275px;
+  margin-top: 135px;
+}
+
+.interstitial.lafourchette .message {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #2C2C2C;
+}
+
+.interstitial.lafourchette .providerLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  height: 35px;
+}
+
+.interstitial.lafourchette .loadingAnimation {
+  width: 70px;
+}

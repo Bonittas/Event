@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["1mxujx",(e,u)=>{var d,l,h=e=>d("svg",{...l(e),children:d("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M22 12H2.208v-1.5H22V12z"})});return[()=>{e("default",h)},[e=>d=e.jsx,e=>l=e.u]]},["121h32","buj4sn"]]);

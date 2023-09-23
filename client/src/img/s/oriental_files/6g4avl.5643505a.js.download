@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["6g4avl",(t,r)=>{var e,u,a;return[()=>{t("default",u(function({children:t,className:r,...u},f){return e("button",{...u,className:a("qwDuD G- C- _J y _S",r),ref:f,children:t})}))},[t=>e=t.jsx,t=>u=t.forwardRef,t=>a=t.default]]},["121h32","1o4yt4","fkji80"]]);

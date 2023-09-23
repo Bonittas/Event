@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["xtzr6n",(i,e)=>{var d,r,t,l,u=({size:i,pos:e})=>d(l,{size:i,position:e}),s=i=>i.fluidType?d(t,{value:{fluidType:i.fluidType},children:d(u,{...i})}):d(u,{...i});return[()=>{i("default",r(s))},[i=>d=i.jsx,i=>r=i.memo,i=>(t=i.AdTargetingProvider,l=i.RailAd)]]},["121h32","1o4yt4","19m912"]]);

@@ -4,7 +4,7 @@ import { faUser, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-ic
 import Header from '../components/Header2';
 import Footer from '../components/Footer'
 
-import img from '../about.jpg';
+import img from '../img/s/events/about.jpg';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -121,7 +121,9 @@ function Contact() {
           </div>
         </div>
       </div>
-      <Footer/>
+       <div className='bg-purple-950 '>
+    <Footer/>
+    </div>
     </>
   );
 }

@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["1bckih",(s,e)=>{var i=()=>({isOmnibusEnabled:!0}),a=()=>({isDataNosnippetEnabled:!0});return[()=>{s({useDataNosnippet:a,useOmnibusFeatures:i})},[]]},[]]);

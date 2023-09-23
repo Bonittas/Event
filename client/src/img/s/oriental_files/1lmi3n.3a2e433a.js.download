@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["1lmi3n",(e,t)=>{var a,r,s,n,u=()=>{var{hasRestaurantSpecialOffer:e}=n();return a(s,{hasRestaurantSpecialOffer:e})};return[()=>{e("default",r((e,t)=>(s.stage(e,t),()=>({})))(u))},[e=>a=e.jsx,e=>r=e.bind,e=>(s=e.default,n=e.useCommercePlacements)]]},["121h32","16z5q2","1wvntj"]]);

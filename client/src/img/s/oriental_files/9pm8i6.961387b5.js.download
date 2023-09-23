@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["9pm8i6",(e,i)=>{var t,r="trips_gai_feedback_flag_1682434131";function a(){var e=t({experimentKeys:[r],skipImpression:!0});return null===e?{fetching:!0,enabled:null}:{fetching:!1,enabled:"test"===e[r]}}return e("useTripGaiFeature",a),[()=>{e("useTripGaiFeature",a)},[e=>t=e.default]]},["gugp1d"]]);

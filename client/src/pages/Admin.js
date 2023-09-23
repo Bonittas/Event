@@ -5,7 +5,7 @@ import { faMapMarkerAlt, faCalendarAlt, faClock, faBars, faTimes } from '@fortaw
 import axios from 'axios';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import myImage from '../dg.avif';
+import myImage from '../img/s/events/dg.avif';
 import Categories from './Catagories';
 
 function Admin({ handleMenuToggle, isMenuOpen }) {
@@ -63,12 +63,28 @@ function Admin({ handleMenuToggle, isMenuOpen }) {
         setContactInfo(data);
       } catch (error) {
         console.error('Error:', error);
+        setContactInfo([]);
       }
     };
 
     fetchContactInfo();
   }, []);
-
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`/admin/${id}`, {
+        method: 'DELETE',
+      });
+      if (response.ok) {
+        // Remove the deleted contact from the state
+        const updatedContactInfo = contactInfo.filter((info) => info.id !== id);
+        setContactInfo(updatedContactInfo);
+      } else {
+        console.error('Error:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
   return (
     <>
       <header className="relative flex justify-between  items-center bg-purple-950">
@@ -239,18 +255,21 @@ function Admin({ handleMenuToggle, isMenuOpen }) {
 </div>
 
 
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 ">Contact Information</h1>
+<div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Contact Information</h1>
       {contactInfo.length > 0 ? (
-        <ul className="grid  gap-4">
+        <ul className="grid grid-cols-2 gap-4">
           {contactInfo.map((info) => (
-            <li
-              key={info.id}
-              className="border border-gray-300 w-1/2 bg-purple-100 rounded  p-4  shadow-md"
-            >
+            <li key={info.id} className="border border-gray-300 bg-purple-100 rounded p-4 shadow-md">
               <div className="font-bold text-purple-950 mb-2">Name of User: {info.name}</div>
               <div className="font-bold text-purple-950 mb-2">Email: {info.email}</div>
               <div className="text-purple-950">Message: {info.message}</div>
+              <button
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4"
+                onClick={() => handleDelete(info.id)}
+              >
+                Delete
+              </button>
             </li>
           ))}
         </ul>

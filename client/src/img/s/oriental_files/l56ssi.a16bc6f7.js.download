@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["l56ssi",(e,t)=>{var s,r,l,u="trips.newsletterId",a=()=>{var[e,t]=l(r(()=>s.get(u),[])());return{newsletterId:e,setNewsletterId:r(e=>{t(e),s.set(u,e)},[])}};return[()=>{e("useTripsNewsletterId",a)},[e=>s=e.default,e=>(r=e.useCallback,l=e.useState)]]},["tp1g68","1o4yt4"]]);

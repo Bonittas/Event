@@ -1,0 +1,1 @@
+(this.$WP=this.$WP||[]).push(["52far5",(e,t)=>{var r,u,s,a=()=>u(s).userId,i=()=>u(s).authenticate;return[()=>{e({UserProvider:(s=r({userId:null,authenticate(){}})).Provider,useAuthenticate:i,useUserId:a})},[e=>(r=e.createContext,u=e.useContext)]]},["1o4yt4"]]);

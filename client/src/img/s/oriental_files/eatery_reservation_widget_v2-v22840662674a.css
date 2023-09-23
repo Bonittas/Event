@@ -1,0 +1,423 @@
+/*Style related to Open table reservation widget used on Restaurant and show user review pages */
+
+/*date picker style - used to make the date picker show only 1 month*/
+.date_picker_calendar.eatery_review .calendar {
+  background:none;
+  width: 200px;
+}
+.date_picker_calendar.eatery_review .calendar .navCal  {
+  background:none;
+}
+
+.rest_widget.v2.sur_hero_rac .restaurant_availability_search.wrap,
+.rest_widget.v2.sur_hero_rac .rac_container .timeSlots {
+  display: inline-block;
+}
+
+.rest_reservation .resv_img {
+  background: #ffffff url('/img2/eateries/reservation_widget_icns.png') no-repeat;
+}
+.rest_reservation .error_msg,
+.rsv_confirm .error_msg {
+  display:none;
+  background: url('/img2/alerts/warning_red.gif') no-repeat scroll 0px 3px transparent;
+  min-height: 16px;
+  color:#CC0000;
+  margin:0 5px 5px 5px;
+  padding-left:23px;
+  padding-top:2px;
+  font-weight:bold;
+}
+.rest_reservation .sep,
+.rsv_confirm .sep {
+  border-bottom: 1px solid #CFCFCF;
+  box-shadow: inset 0 0 0 #FFF, 0 1px 0 #FFF;
+}
+.rest_reservation .wrap {
+  padding: 10px;
+}
+.reservation_container {
+  background-color: #F6F6F6;
+  border: 1px solid #CFCFCF;
+  margin-top: 20px;
+}
+#FIND_TABLE {
+  cursor: pointer;
+}
+
+.rac_special_offer {
+  color: #000;
+  font-weight: bold;
+  font-size: .9em;
+  margin-top:4px;
+}
+.rest_widget.v2 .rac_special_offer .asterisk {
+  font-size: 0.8em;
+  line-height: 0;
+  vertical-align: 5px;
+}
+
+/* Buttons */
+.rest_widget .rndBtn,
+.rsv_confirm .rndBtn {
+  font-weight: bold;
+  font-size: 1.1670em;
+  border-width: 1px;
+  border-style: solid;
+}
+.rndBtn.rndBtnGry {
+  display: none;
+  border-color: #DBDBDB !important;
+  color: #086AA7 !important;
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  float: left;
+  padding: 0 10px;
+}
+.rndBtnGry {
+  background-color: #EFEFEF;
+  background-image: -webkit-linear-gradient(top, #EFEFEF, #FEFEFE);
+  background-image: -moz-linear-gradient(top, #EFEFEF 0%, #FEFEFE 100%);
+  background-image: -o-linear-gradient(top, #EFEFEF 0%, #FEFEFE 100%);
+  background-image: linear-gradient(to bottom, #EFEFEF 0%, #FEFEFE 100%);
+}
+.above_the_fold .rndBtnGry{
+  background-color: #EFEFEF;
+  background-image: -webkit-linear-gradient(top, #FEFEFE, #EFEFEF);
+  background-image: -moz-linear-gradient(top, #FEFEFE 0%, #EFEFEF 100%);
+  background-image: -o-linear-gradient(top, #FEFEFE 0%, #EFEFEF 100%);
+  background-image: linear-gradient(to bottom, #FEFEFE 0%, #EFEFEF 100%);
+}
+.above_the_fold .rest_widget.v2 .update_table.rndBtnGry:hover {
+  background: #EFEFEF;
+}
+.rndBtn.rndBtnYlw {
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 9px;
+  background-color: #FFCC00;
+  background-image: -webkit-linear-gradient(top, #FFE9C9, #FFCC00);
+  background-image: -moz-linear-gradient(top, #FFE9C9 0%, #FFCC00 100%);
+  background-image: -o-linear-gradient(top, #FFE9C9 0%, #FFCC00 100%);
+  background-image: -ms-linear-gradient(top, #FFE9C9 0%, #FFCC00 100%);
+  background-image: linear-gradient(to bottom, #FFE9C9 0%, #FFCC00 100%);
+  border-color: #FFC000 #F8BA00 #E5AB00 #F2B600 !important;
+}
+.rndBtn.rndBtnYlw:hover {
+  background-color: #FEC100;
+  background-image: -webkit-linear-gradient(top, #F9D050, #FEC100);
+  background-image: -moz-linear-gradient(top, #F9D050 0%, #FEC100 100%);
+  background-image: -o-linear-gradient(top, #F9D050 0%, #FEC100 100%);
+  background-image: -ms-linear-gradient(top, #F9D050 0%, #FEC100 100%);
+  background-image: linear-gradient(to bottom, #F9D050 0%, #FEC100 100%);
+  border-color: #FFB300 #F3AB00 #DE9C00 #F5AC00 !important;
+}
+
+
+/* timeslots */
+.rest_reservation .timeslot {
+  border: 1px solid #CFCFCF;
+  border-radius: 2px;
+  margin: 10px 4px 0 0;
+  cursor: pointer;
+  float: left;
+  width: 65px;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.0835em;
+  color: #2C2C2C;
+}
+.rest_reservation .timeslot span {
+  line-height: 25px;
+  vertical-align: middle;
+}
+.rest_reservation .timeslot.none {
+  background: #FFF none no-repeat;
+  color: #CFCFCF;
+  cursor: auto;
+  font-weight: normal;
+}
+.rest_reservation .rndBtnYlw {
+  margin-top: 10px;
+}
+
+#RSV_SLOTS img {
+  float: left;
+  margin-top: 10px;
+  width: auto;
+}
+
+/* confirmation layers */
+#RESERVATION_CONFIRM {
+  padding: 14px 0 15px;
+}
+#RESERVATION_CONFIRM .cta {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background-color: #FEC100;
+  background-image: -webkit-linear-gradient(top,#F9D050,#FEC100);
+  background-image: -moz-linear-gradient(top,#F9D050 0,#FEC100 100%);
+  background-image: -o-linear-gradient(top,#F9D050 0,#FEC100 100%);
+  background-image: linear-gradient(to bottom,#F9D050 0,#FEC100 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9D050',endColorstr='#FEC100',GradientType=0);
+  border-color: #FFB300 #F3AB00 #DE9C00 #F5AC00;
+}
+
+#RESERVATION_CONFIRMATION {
+  width: 415px;
+}
+#RESERVATION_CONFIRMATION .wrap {
+  padding-bottom: 15px;
+}
+
+/* Reservation layers generic */
+.rsv_confirm .header {
+  background-color: #00a680;
+  padding: 0 15px 0;
+  font-weight: bold;
+  font-size: 1.50em;
+  color: #FFF;
+  text-shadow: 1px 1px #000;
+}
+.rsv_confirm .header span {
+  line-height: 35px;
+  vertical-align: middle;
+}
+.rsv_confirm .wrap {
+  padding: 14px 15px 15px;
+  font-size: 1.1670em;
+  line-height: 1.50em;
+  color: #2C2C2C;
+}
+.rsv_confirm .banner {
+  height: 88px;
+}
+.rsv_confirm .legal {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 0.9165em;
+}
+.rsv_confirm .btn {
+  margin-top: 30px;
+}
+.overlay.rsv_confirm {
+  border: 8px solid rgba(0, 0, 0, .8);
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+}
+.bt {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+/* Confirmation Dialog (entering info) */
+#RSV_CONFIRM {
+  width: 728px;
+}
+#RSV_CONFIRM .sizedThumb {
+  float: left;
+  margin-right: 15px;
+}
+#RSV_CONFIRM .rsv_info {
+  padding-bottom: 15px;
+  overflow: auto;
+  width: 100%;
+}
+#RSV_CONFIRM input[type=text] {
+  margin-bottom: 10px;
+  width: 332px;
+  height: 30px;
+  background: #FFF;
+  border: 1px solid #CCCCCC;
+  float: left;
+  padding-left: 10px;
+  font-size: 0.9165em;
+  line-height: 28px;
+}
+#RSV_CONFIRM input[type=text].first {
+  margin-right: 10px;
+}
+#RSV_CONFIRM input.default {
+  color: #999;
+}
+#RSV_CONFIRM .countryNum {
+  float: left;
+  height: 32px;
+  width: 62px;
+}
+.rtl #RSV_CONFIRM select.countryNum {
+   float: left;
+}
+#RSV_CONFIRM textarea {
+  width: 676px;
+  height: 60px;
+  background: #FFF;
+  border: 1px solid #CCC;
+  padding: 0 10px;
+  font: 1.0835em inherrit;
+  margin-bottom: 10px;
+}
+#RSV_CONFIRM .error {
+  border: 1px solid #C00 !important;
+}
+#RSV_CONFIRM .rsv_info .eatery_info {
+  padding-top: 18px;
+}
+#RSV_CONFIRM .rsv_brand {
+  margin-top: 10px;
+}
+.rsv_brand img {
+  height: 14px;
+}
+#RSV_CONFIRM input[type=text].countryNum, #RSV_CONFIRM select.countryNum {
+  width: 62px;
+  margin-right: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#RSV_CONFIRM input[type=text].phone {
+  width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Displaying existing reservation */
+.reservation_display {
+  width: 356px;
+  background-color: #F6F6F6;
+}
+.reservation_display .header {
+  background-color: transparent;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 1.0835em;
+  color: #2C2C2C;
+  text-shadow: none;
+}
+.reservation_display .wrap {
+  padding: 10px;
+  font-size: 1.0835em;
+  line-height: inherit;
+}
+.reservation_display .rsv_info {
+  margin-bottom: 30px;
+}
+.reservation_display .rsv_brand {
+  font-size: 0.8335em;
+  float: right;
+}
+
+/* Cancel Dialog */
+#RSV_CANCEL {
+  width: 390px;
+}
+#RSV_CANCEL .lnkSm {
+  font-size: 0.9165em;
+  margin: 3px 0 0 15px;
+  display: inline-table;
+}
+
+/* Rac timeslots */
+.rest_reservation .no_availability,
+.rest_reservation .no_availability_autorac {
+  text-align: left;
+  display: none;
+  padding: 0 0;
+}
+.offer_container {
+  display:none;
+}
+.timeSlots .timeSlotWrapper .offer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -4px;
+  left: 0;
+  border-left: 5px solid transparent;
+  border-top: 4px solid #000;
+}
+.albumLightbox .rest_widget.v2 .bottomNavigation {
+  display: none;
+}
+
+.rest_widget.v2 .rest_reservation {
+  margin-bottom: 10px;
+}
+
+.rest_widget.v2 .resv_header.sep {
+  border-bottom: 0px;
+  box-shadow: none;
+}
+
+.rest_widget.v2 .timeSlotWrapper {
+  display: inline-block;
+}
+
+.rest_widget.v2 .update_table.rndBtn {
+  border-color: #C8C8C8!important;
+  color: #4F4F4F!important;
+  border-radius: 4px;
+  font-size: 1.1em;
+  padding: 0 8px;
+  float: none;
+  margin: 7px 0;
+}
+
+.rest_widget.v2 .update_table.rndBtn:hover {
+  background: #f5f6f6;
+  background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #dddfe3 80%, #f5f6f6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6));
+  background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#dddfe3 80%,#f5f6f6 100%);
+  background: -o-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#dddfe3 80%,#f5f6f6 100%);
+  background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#dddfe3 80%,#f5f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 );
+}
+
+.rest_widget.v2 .loading {
+  position: relative;
+  left: -115px;
+}
+
+.rest_widget.v2 .loading img {
+  float: none;
+}
+
+.interstitial.lafourchette {
+  text-align: center;
+  height: 275px;
+  margin-top: 135px;
+}
+
+.interstitial.lafourchette .message {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #2C2C2C;
+}
+
+.interstitial.lafourchette .providerLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  height: 35px;
+}
+
+.interstitial.lafourchette .loadingAnimation {
+  width: 70px;
+}
