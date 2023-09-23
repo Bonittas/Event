@@ -135,7 +135,7 @@ const Home = () => {
           <>
             <div className="text-center items-center text-white md:mb-16 lg:mb-16 sm:mb-32 relative top-8 font-bold mt-4">
               <p className="lg:text-4xl md:text-4xl left-32 sm:text-xl pt-2">Explore Exciting Events</p>
-              <p className="text-md pb-3">Engage, Connect, and Enrich!</p>
+              <p className="text-md pb-3">Engage, Connect, and Enrich!!</p>
             </div>
 
             <div className="flex justify-center">
