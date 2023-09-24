@@ -59,12 +59,12 @@ const Home = () => {
 
   const visiblePlaces = [
     {
-      id: 4,
-      name: 'Art Exhibition',
-      location: '5 kilo Museum, Addis Ababa',
-      Time: '7AM - 11AM',
-      Date:'Sep 21 2023',
-      imageUrl: img4,
+      id: 3,
+      name: 'Concert by Rophnan',
+      location: 'Sky Light Hotel, Addis Ababa',
+      Time: '8PM',
+      Date:'Oct 19 2023',     
+       imageUrl: img3,
     },
     {
       id: 1,
@@ -74,6 +74,8 @@ const Home = () => {
       Date : 'Aug 10 2023',
       imageUrl: img1,
     },
+   
+   
     {
       id: 2,
       name: 'Bazzar',
@@ -82,14 +84,7 @@ const Home = () => {
       Date:'Sep 29 2023',
       imageUrl: img2,
     },
-    {
-      id: 3,
-      name: 'Concert by Rophnan',
-      location: 'Sky Light Hotel, Addis Ababa',
-      Time: '8PM',
-      Date:'Oct 19 2023',     
-       imageUrl: img3,
-    },
+    
     {
       id: 5,
       name: 'Concert by Jano Band',
@@ -97,6 +92,14 @@ const Home = () => {
       Time: '2PM - 11AM',
       Date:'Oct 11 2023',     
       imageUrl: img5,
+    },
+    {
+      id: 4,
+      name: 'Art Exhibition',
+      location: '5 kilo Museum, Addis Ababa',
+      Time: '7AM - 11AM',
+      Date:'Sep 21 2023',
+      imageUrl: img4,
     },
     {
       id:6,

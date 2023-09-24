@@ -227,7 +227,7 @@ const Suggestion = () => {
   <div className="p-1  bg-white bg-opacity-75">
     <h2 className="lg:text-lg md:text-md sm:text-md  mb-1 text-black font-cursive">{place.name}</h2>
 <p className="text-black mb-3">         
-{place.location}</p>
+<FontAwesomeIcon icon={faLocation}></FontAwesomeIcon>{place.location}</p>
 {/* <p className='mb-3'> <FontAwesomeIcon icon={faClock} className="w-4 h-4 text-gray-400" />{place.Time}</p>
 <p className='mb-3'> <FontAwesomeIcon icon={faCalendarAlt} className="w-4 h-4 text-gray-400" />{place.Date}</p> */}
   </div>

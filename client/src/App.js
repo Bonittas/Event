@@ -1,32 +1,55 @@
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import 'tailwindcss/tailwind.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import reportWebVitals from './reportWebVitals';
 
-import Home from './components/Admin';
-import Register from './components/Register';
-import { Route,Routes } from 'react-router-dom';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import Home from './pages/Home';
+import Signup from './pages/Signup';
 import Header from './components/Header';
-import Addsugg from './components/Addsugg';
-import Suggestion from './components/Suggestion';
+import Header2 from './components/Header2';
+import Header3 from './components/Header3';
+import Login from './pages/Login';
+import Admin from './pages/Admin';
+import Footer from './components/Footer';
+import Register from './pages/Register';
+import Addsugg from './pages/Addsugg';
+import Suggestion from './pages/Suggestion';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Events from './pages/Events';
+
+import Catagories from './pages/Catagories';
 
 
 function App() {
   return (
     <>
-  
-      <Routes>
- 
-        <Route path='/home' element={<Home />} />
+
+    <Routes>
+    <Route path="/admin" element={<Admin />} />
+   
+   
+      <Route path="/header" element={<Header />}/>
+      <Route path="/header2" element={<Header2 />}/>
+      <Route path="/header3" element={<Header3 />}/>
+
+        <Route index element={<Home />} />
+        <Route path='/contact' element={<Contact />}/>
+        <Route path='/about' element={<About />}/>
+        <Route path='/catagories' element={<Catagories />}/>
         <Route path='/suggestion' element={<Suggestion />} />
         <Route path='/addsugg' element={<Addsugg />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />}/>
-        <Route path='/signup' element={<Signup />}/>
-        <Route path='/header' element={<Header />}/>
-        
- 
-      </Routes>
+        <Route path='/events' element={<Events />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/footer" element={<Footer/>}/>
+     
+   
+    </Routes>
+  
+
       
       
     </>
