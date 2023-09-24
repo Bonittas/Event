@@ -90,7 +90,6 @@ const Home = () => {
       Date:'Oct 19 2023',     
        imageUrl: img3,
     },
-    
     {
       id: 5,
       name: 'Concert by Jano Band',
