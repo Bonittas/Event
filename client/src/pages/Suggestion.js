@@ -13,7 +13,7 @@ import img1 from '../img/s/sugg/sheraton.jpg'
 import img2 from '../img/s/sugg/damat.jpg'
 import img3 from '../img/s/sugg/kuriftu.jpg'
 import img4 from '../img/s/sugg/lewi resort.jpg'
-import img5 from '../img/s/sugg/liesak.jpg'
+import img5 from '../img/s/sugg/sodere.jpg'
 import img6 from '../img/s/sugg/haileziway.jpg'
 import img7 from '../img/s/sugg/langano.jpg'
 
@@ -114,8 +114,8 @@ const Suggestion = () => {
   
     {
       id: 5,
-      name: 'Liesak Resort',
-      location: 'Hawassa, Ethiopia',
+      name: 'Sodere Resort Hotel',
+      location: 'Adama, Ethiopia',
       Time: '6AM - 11AM',
       Date:'Oct 11 2023',     
       imageUrl: img5,

@@ -11,7 +11,11 @@ import img1 from '../img/s/events/scie.jpg'
 import img2 from '../img/s/events/bazz.jpg'
 import img3 from '../img/s/events/rophnan.jpg'
 import img4 from '../img/s/events/artt.jpg'
-import img5 from '../img/s/events/run4.png'
+import img5 from '../img/s/events/Jano.jpg'
+import img6 from '../img/s/events/hallowwin.png'
+import img7 from '../img/s/events/Hachton.png'
+import img8 from '../img/s/events/culture.jpg'
+import img9 from '../img/s/events/runn.jpg'
 
 const Home = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -80,20 +84,52 @@ const Home = () => {
     },
     {
       id: 3,
-      name: 'Concert: Rophnan',
+      name: 'Concert by Rophnan',
       location: 'Sky Light Hotel, Addis Ababa',
-      Time: '6PM',
-      Date:'Oct 23 2023',     
+      Time: '8PM',
+      Date:'Oct 19 2023',     
        imageUrl: img3,
     },
     
     {
       id: 5,
+      name: 'Concert by Jano Band',
+      location: 'Millinium Hall, Addis Ababa',
+      Time: '2PM - 11AM',
+      Date:'Oct 11 2023',     
+      imageUrl: img5,
+    },
+    {
+      id:6,
+      name: 'Hallowwin Party ',
+      location: 'Legend Hotel, Addis Ababa',
+      Time: '7PM',
+      Date:'Nov 17 2023',     
+      imageUrl: img6,
+    },
+    {
+      id: 7,
+      name: 'Hackaton',
+      location: 'Ethiopian Science Museum, Addis Ababa',
+      Time: '10AM - 12PM',
+      Date:'Dec 22 2023',     
+      imageUrl: img7,
+    },
+    {
+      id: 8,
+      name: 'Culture Day',
+      location: 'Unity Park, Addis Ababa',
+      Time: '9AM - 1AM',
+      Date:'Oct 19 2023',     
+      imageUrl: img8,
+    },
+    {
+      id: 9,
       name: 'Ethiopian Great Run',
       location: 'Addis Ababa, Ethiopia',
       Time: '6AM - 11AM',
       Date:'Oct 11 2023',     
-      imageUrl: img5,
+      imageUrl: img9,
     },
   ];
 

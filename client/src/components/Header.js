@@ -22,7 +22,7 @@ function Header({ handleMenuToggle, isMenuOpen }) {
         src={myImage}
         alt="Background"
         className="w-full h-auto object-cover"
-        style={{ maxHeight: '600px' }}
+        style={{ maxHeight: '660px' }}
       />
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex flex-col justify-center items-center">
     
