@@ -190,7 +190,7 @@ const Home = () => {
                   className="bg-purple-950 hover:bg-purple-900 text-white font-bold lg:h-16 md:h-16 sm:h-10 py-2 px-4 rounded-r-full absolute right-0 top-0"
                   onClick={handleFormSubmit}
                 >
-                  <div className='whitespace-nowrap px-2'>Search<FontAwesomeIcon
+                  <div className='whitespace-nowrap px-2'><FontAwesomeIcon
   icon={faSearch}
   style={{ marginLeft: '0.5rem' }}
 /></div>

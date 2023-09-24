@@ -81,7 +81,7 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-4">Contact</h2>
             <p className="text-md py-2 font-cursive">EventStream</p>
             <p className="text-md py-2">Email:biftushibbire@gmail.com</p>
-            <p className="text-md py-2">Phone: +2519-23-456-780</p>
+            <p className="text-md py-2">Phone: +2519-02-284-9..</p>
             <p className="text-md py-2">Address: 123 Street, City, Country</p>
           </div>
 
@@ -89,7 +89,7 @@ const Footer = () => {
             <h2 className="text-lg font-bold mb-4">Follow Us</h2>
             <ul className="flex space-x-4">
               <li>
-                <Link to="#" className="text-white hover:text-purple-200 transition-colors duration-300">
+                <Link to="https://www.linkedin.com/in/biftu-shibbire-20411a228/" className="text-white hover:text-purple-200 transition-colors duration-300">
                   <FontAwesomeIcon
                     icon={faFacebookSquare}
                     className="text-2xl"
@@ -97,7 +97,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-white hover:text-purple-200 transition-colors duration-300">
+                <Link to="https://www.linkedin.com/in/biftu-shibbire-20411a228/" className="text-white hover:text-purple-200 transition-colors duration-300">
                   <FontAwesomeIcon
                     icon={faTwitterSquare}
                     className="text-2xl"
@@ -105,7 +105,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-white hover:text-purple-200 transition-colors duration-300">
+                <Link to="https://www.linkedin.com/in/biftu-shibbire-20411a228/" className="text-white hover:text-purple-200 transition-colors duration-300">
                   <FontAwesomeIcon
                     icon={faInstagramSquare}
                     className="text-2xl"

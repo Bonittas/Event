@@ -5,7 +5,9 @@ import { faBirthdayCake, faRing, faGraduationCap,faMapMarketAlt, faHeart, faCock
 import Header from '../components/Header3';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router'
+import myImage from '../img/s/sugg/hotte.jpg';
+
 import img9 from '../img/s/sugg/sky.jpg'
 import img8 from '../img/s/sugg/haileAdama.jpg'
 import img1 from '../img/s/sugg/sheraton.jpg'
