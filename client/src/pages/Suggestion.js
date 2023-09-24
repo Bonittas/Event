@@ -1,12 +1,21 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBirthdayCake, faRing, faGraduationCap, faHeart, faCocktail, faHeartbeat,faLocation, faBriefcase, faHotel } from '@fortawesome/free-solid-svg-icons';
+import { faBirthdayCake, faRing, faGraduationCap,faMapMarketAlt, faHeart, faCocktail, faHeartbeat,faLocation, faBriefcase, faHotel } from '@fortawesome/free-solid-svg-icons';
 import Header from '../components/Header3';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router';
 import myImage from '../img/s/sugg/hotte.jpg';
+import img9 from '../img/s/sugg/sky.jpg'
+import img8 from '../img/s/sugg/haileAdama.jpg'
+import img1 from '../img/s/sugg/sheraton.jpg'
+import img2 from '../img/s/sugg/damat.jpg'
+import img3 from '../img/s/sugg/kuriftu.jpg'
+import img4 from '../img/s/sugg/lewi resort.jpg'
+import img5 from '../img/s/sugg/liesak.jpg'
+import img6 from '../img/s/sugg/haileziway.jpg'
+import img7 from '../img/s/sugg/langano.jpg'
 
 const Suggestion = () => {
   const [data, setData] = useState([]);
@@ -85,7 +94,86 @@ const Suggestion = () => {
   useEffect(() => {
     getUserData();
   }, []);
+  const visiblePlaces = [
+    {
+      id: 2,
+      name: 'Kuriftu',
+      location: 'Addis Ababa, Ethiopia',
+      Time: '7AM - 6PM',
+      Date:'Sep 29 2023',
+      imageUrl: img3,
+    },
+    {
+      id: 8,
+      name: 'Haile Resort',
+      location: 'Adama, Ethiopia',
+      Time: '6AM - 11AM',
+      Date:'Oct 11 2023',     
+      imageUrl: img8,
+    },
   
+    {
+      id: 5,
+      name: 'Liesak Resort',
+      location: 'Hawassa, Ethiopia',
+      Time: '6AM - 11AM',
+      Date:'Oct 11 2023',     
+      imageUrl: img5,
+    },
+    {
+      id: 1,
+      name: 'Damat Hotel',
+      location: 'Addis Ababa, Ethiopia',
+      Time: ' 8AM - 4PM    ',
+      Date : 'Aug 10 2023',
+      imageUrl: img2,
+    },
+
+    {
+      id: 7,
+      name: 'Langano',
+      location: 'Ziway, Ethiopia',
+      Time: '6AM - 11AM',
+      Date:'Oct 11 2023',     
+      imageUrl: img7,
+    },
+      {
+      id: 4,
+      name: 'Sheraton Addis',
+      location: ' Addis Ababa, Ethiopia',
+      Time: '7AM - 11AM',
+      Date:'Sep 21 2023',
+      imageUrl: img1,
+    },
+    
+    {
+      id: 3,
+      name: 'Lewi Resort',
+      location: 'Hawassa,  Ethiopia',
+      Time: '6PM',
+      Date:'Oct 23 2023',     
+       imageUrl: img4,
+    },
+    
+    
+     
+    {
+      id: 6,
+      name: 'Haile Resort',
+      location: 'Ziway, Ethiopia',
+      Time: '6AM - 11AM',
+      Date:'Oct 11 2023',     
+      imageUrl: img6,
+    },
+    {
+      id: 9,
+      name: 'Sky Light Hotel',
+      location: 'Addis Ababa, Ethiopia',
+      Time: '6AM - 11AM',
+      Date:'Oct 11 2023',     
+      imageUrl: img9,
+    },
+  ];
   return (
     <>
     <div className='z-30'>
@@ -124,8 +212,30 @@ const Suggestion = () => {
             <FontAwesomeIcon icon={faHeartbeat} className=" hover:bg-blue-400 hover:bg-opacity-30 border-1 mx-6 mb-4  bg-white bg-opacity-10 rounded-full text-white w-8 h-8 p-2" />
             <FontAwesomeIcon icon={faHotel} className=" hover:bg-blue-400 hover:bg-opacity-30 border-1 mx-6 mb-4 bg-white bg-opacity-10 rounded-full text-white w-8 h-8 p-2" />
             </div>
+            <p className="text-3xl text-center font-bold py-4 font-cursive">Explore Suggested Hotels and Places</p>
+
+<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mx-4">
+{visiblePlaces.map((place, index) => (
+<div
+  key={place.id}
+  className="bg-white rounded-md overflow-hidden shadow-lg relative"
+>
+  <div className="h-64 md:h-48 lg:h-64 ">
+    <img className="h-full w-full object-cover" src={place.imageUrl} alt={place.name} />
+   
+   
+  </div>
+  <div className="p-1  bg-white bg-opacity-75">
+    <h2 className="lg:text-lg md:text-md sm:text-md  mb-1 text-black font-cursive">{place.name}</h2>
+<p className="text-black mb-3">         
+{place.location}</p>
+{/* <p className='mb-3'> <FontAwesomeIcon icon={faClock} className="w-4 h-4 text-gray-400" />{place.Time}</p>
+<p className='mb-3'> <FontAwesomeIcon icon={faCalendarAlt} className="w-4 h-4 text-gray-400" />{place.Date}</p> */}
+  </div>
+</div>
+))}
+</div>
       <div className="mt-8">
-        <p className="text-3xl text-center font-bold py-4 font-cursive">Explore Suggested Hotels and Places</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {filteredEvents.length > 0 ? (
             filteredEvents.map((item) => (
