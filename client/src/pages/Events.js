@@ -290,7 +290,7 @@ const Events = () => {
             </button>
           </div>
 
-          <div className="hidden text-white sm:flex items-center space-x-4 absolute top-8 right-4">
+          <div className="hidden text-white sm:flex items-center space-x-4 absolute top-8 right-4 z-20">
             <button className="hover:bg-orange-600  bg-orange-500 border-white border-r-2 text-sm  px-4 py-2 rounded-l-full relative left-4">
             <Link to="/signup" className="block  text-white ">
             SignUp
@@ -320,7 +320,7 @@ const Events = () => {
             <Link to="/contact" className="block text-white hover:text-white">
               Contact
             </Link>
-            <div className="flex items-center mt-4">
+            <div className="flex items-center mt-4 z-20">
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-2 py-2 rounded-lg">
                 Sign In
               </button>

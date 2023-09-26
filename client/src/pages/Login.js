@@ -45,17 +45,19 @@ function Login() {
   };
 
   if (errors.email === '' && errors.password === '') {
-    // Check if the username and password match the desired values
     if (values.email === 'admin@gmail.com' && values.password === 'Password123') {
-      // Redirect to the admin page
       navigate('/admin');
     }
   }
 
   return (
     <>
-      <div className="z-20">
-
+      <div
+          className="w-full h-screen bg-cover bg-center"
+          style={{ backgroundImage: `url(${myImage})` }}
+        >
+            <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex flex-col justify-center items-center"
+/>
           <div className="items-end z-20">
             <Header2 />
           </div>

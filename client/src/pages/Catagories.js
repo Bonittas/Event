@@ -67,7 +67,7 @@ const CategoryCard = ({ title, icon, link }) => {
           }`}
         >
           <FontAwesomeIcon icon={icon} className={`text-white text-6xl mb-6${isHovered ? 'animate-bounce' : ''}`} />
-          <FontAwesomeIcon icon={faArrowRight} className={`text-white text-2xl absolute right-4 mt-4 rounded-full bg-white bg-opacity-20 border-1 p-2 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
+          <FontAwesomeIcon icon={faArrowRight} className={`text-white text-xl absolute right-1 mt-4 rounded-full bg-white bg-opacity-20 border-1 p-2 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
         </div>
         <div className={`absolute text-white bottom-0 left-0 right-0 p-2  ${isHovered ? 'bg-gradient-to-r from-purple-500 to-purple-800' : 'h-10 bg-white bg-opacity-10'}`}>
           <p className={`text-white   text-lg font-semibold ${isHovered ? 'text-white' : ''}`}>{title}</p>

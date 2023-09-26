@@ -27,7 +27,7 @@ function Header3() {
         src={myImage}
         alt="Background"
         className="w-full h-auto object-cover bg-blue-800"
-        style={{ maxHeight: '580px' }}
+        style={{ maxHeight: '610px' }}
       />
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex flex-col justify-center items-center">
     

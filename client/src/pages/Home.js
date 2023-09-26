@@ -160,8 +160,9 @@ const Home = () => {
 
   return (
     <>
+    <div className='z-30 h-full'>
       <Header setSearchQuery={setSearchQuery} handleMenuToggle={handleMenuToggle} isMenuOpen={isMenuOpen} />
-
+      </div>
       <div className="mb-6 bg-gray-300">
       <Suspense fallback={<div>Loading...</div>}>
         <Categories />
@@ -181,7 +182,7 @@ const Home = () => {
                 <input
                   type="text"
                   className="rounded-l-full lg:h-16 md:h-16 sm:h-10 py-2 px-4 sm:pr-12 w-full relative right-10 text-white bg-white bg-opacity-10 focus:outline-none focus:border-purple-500 border-2 border-purple-950 leading-tight shadow-lg mb-2 sm:mb-0"
-                  placeholder="Search for Events"
+                  placeholder="Search Events"
                   value={searchQuery}
                   onChange={handleSearchChange}
                 />
