@@ -43,7 +43,7 @@ const Register = () => {
     setFile(e.target.files[0]);
   };
 
-  const addUserData = async (e) => {
+  const addEventData = async (e) => {
     e.preventDefault();
 
     const formattedTime = moment(time, 'HH:mm').format('hh:mm a');
@@ -61,14 +61,14 @@ const Register = () => {
     formData.append('closingDate', formattedClosingDate);
 
     try {
-      const res = await axios.post('/register', formData, {
+      const res = await axios.post('/admin/events', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
 
       if (res.status === 201) {
-        navigate('/');
+        navigate('/admin/events');
       } else {
         console.log('Error:', res.data.message);
       }
@@ -80,142 +80,121 @@ const Register = () => {
   return (
     <>
       <Header />
-      <div className='flex justify-center items-center '>
-      <div className=' bg-purple-950 bg-opacity-40 absolute top-24 p-4 rounded-lg'>
-      <div className="container mt-3   ">
-  <h1 className="text-xl text-white mb-6 items-center">Upload currently available events</h1>
+      <div className='flex justify-center items-center'>
+        <div className='bg-purple-950 bg-opacity-40 absolute top-24 p-4 rounded-lg'>
+          <div className="container mt-3">
+            <h1 className="text-xl text-white mb-6 items-center">Upload New Event</h1>
 
-  <form>
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-      <div>
-        <label htmlFor="date" className="block text-sm font-medium text-white mb-1">
-          Date
-        </label>
-        <input
-          type="date"
-          className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-6 py-1"
-          id="date"
-          name="date"
-          onChange={setDats}
-        />
-      </div>
+            <form>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                <div>
+                  <label htmlFor="date" className="block text-sm font-medium text-white mb-1">
+                    Date
+                  </label>
+                  <input
+                    type="date"
+                    className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-6 py-1"
+                    id="date"
+                    name="date"
+                    onChange={setDats}
+                  />
+                </div>
 
-      <div>
-        <label htmlFor="closingDate" className="block text-sm font-medium text-white mb-1">
-          Closing Date
-        </label>
-        <input
-          type="date"
-          className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black py-1 px-6"
-          id="closingDate"
-          name="closingDate"
-          onChange={setClosingDats}
-        />
-      </div>
+                <div>
+                  <label htmlFor="closingDate" className="block text-sm font-medium text-white mb-1">
+                    Closing Date
+                  </label>
+                  <input
+                    type="date"
+                    className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black py-1 px-6"
+                    id="closingDate"
+                    name="closingDate"
+                    onChange={setClosingDats}
+                  />
+                </div>
 
-      <div>
-        <label htmlFor="location" className="block text-sm font-medium text-white mb-1">
-          Location
-        </label>
-        <input
-          type="text"
-          className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-1 py-1"
-          id="location"
-          name="location"
-          onChange={setLocation}
-        />
-      </div>
+                <div>
+                  <label htmlFor="location" className="block text-sm font-medium text-white mb-1">
+                    Location
+                  </label>
+                  <input
+                    type="text"
+                    className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-1 py-1"
+                    id="location"
+                    name="location"
+                    onChange={setLocation}
+                  />
+                </div>
 
-      <div>
-        <label htmlFor="topics" className="block text-sm font-medium text-white mb-1">
-          Topics
-        </label>
-        <input
-          type="text"
-          className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-1 py-1"
-          id="topics"
-          name="topics"
-          onChange={setdata}
-        />
-      </div>
+                <div>
+                  <label htmlFor="topics" className="block text-sm font-medium text-white mb-1">
+                    Topics
+                  </label>
+                  <input
+                    type="text"
+                    className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-1 py-1"
+                    id="topics"
+                    name="topics"
+                    onChange={setdata}
+                  />
+                </div>
 
-      <div>
-        <label htmlFor="time" className="block text-sm font-medium text-white mb-1">
-          Time
-        </label>
-        <input
-          type="time"
-          className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-10 py-1"
-          id="time"
-          name="time"
-          onChange={setTims}
-        />
-      </div>
+                <div>
+                  <label htmlFor="time" className="block text-sm font-medium text-white mb-1">
+                    Time
+                  </label>
+                  <input
+                    type="time"
+                    className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-6 py-1"
+                    id="time"
+                    name="time"
+                    onChange={setTims}
+                  />
+                </div>
 
-      <div>
-        <label htmlFor="closingTime" className="block text-sm font-medium text-white mb-1">
-          Closing Time
-        </label>
-        <input
-          type="time"
-          className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-10 py-1"
-          id="closingTime"
-          name="closingTime"
-          onChange={setClosingTims}
-        />
-      </div>
+                <div>
+                  <label htmlFor="closingTime" className="block text-sm font-medium text-white mb-1">
+                    Closing Time
+                  </label>
+                  <input
+                    type="time"
+                    className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-6 py-1"
+                    id="closingTime"
+                    name="closingTime"
+                    onChange={setClosingTims}
+                  />
+                </div>
 
-      <div>
-        <label htmlFor="image" className="block text-sm font-medium text-white mb-1">
-          Image
-        </label>
-        <div className="flex items-center">
-          <label className="cursor-pointer flex items-center justify-center px-4 py-2 bg-purple-950 hover:bg-purple-300 hover:text-black text-white rounded-lg shadow-md hover:bg-purple-600">
-            <svg
-              className="w-6 h-6 mr-2 border-1 border-white bg-white bg-opacity-10 rounded-full"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-              ></path>
-            </svg>
-            <span>Upload Image</span>
-            <input
-              type="file"
-              accept="image/*"
-              className="hidden"
-              id="image"
-              name="image"
-              onChange={setimgfile}
-            />
-          </label>
+                <div>
+                  <label htmlFor="photo" className="block text-sm font-medium text-white mb-1">
+                    Photo
+                  </label>
+                  <input
+                    type="file"
+                    className="input-field bg-gray-300 border-2 border-purple-500 rounded-md text-black px-6 py-1"
+                    id="photo"
+                    name="photo"
+                    accept="image/*"
+                    onChange={setimgfile}
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <button
+                  type="submit"
+                  className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-1 px-4 rounded"
+                  onClick={addEventData}
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <div className="mt-6 bg-gray-300 hover:bg-purple-950   items-center text-center rounded-md">
-      <button
-        type="submit"
-        onClick={addUserData}
-        className="text-black hover:text-white py-2 px-3  text-center"
-      >
-        Submit
-      </button>
-    </div>
-    </div>
-
-   
-  </form>
-</div>
-</div>
-</div>
-<Footer/>
+      <Footer />
     </>
   );
 };
-
 export default Register;
